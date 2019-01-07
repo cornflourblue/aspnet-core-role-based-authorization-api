@@ -1,0 +1,16 @@
+{
+    "version": "2.0.0",
+    "command": "dotnet",
+    "type": "shell",
+    "args": [],
+    "tasks": [
+        {
+            "label": "build",
+            "args": [
+                "${workspaceRoot}/WebApi.csproj"
+            ],
+            "group": "build",
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
