@@ -42,6 +42,10 @@ namespace WebApi.Controllers
         {
             var user =  _userService.GetById(id);
 
+            if (user == null) {
+                return NotFound();
+            }
+
             // only allow admins to access other user records
             var currentUserId = int.Parse(User.Identity.Name);
             if (id != currentUserId && !User.IsInRole(Role.Admin)) {
